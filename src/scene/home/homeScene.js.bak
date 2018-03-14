@@ -127,7 +127,7 @@ class HomeScene extends PureComponent<Props, State> {
 
     renderHeader = () => {
         return (
-            <View>
+            <ScrollView>
                 <HomeMenuView menuInfos={api.menuInfo} onMenuSelected={this.onMenuSelected} />
                 <SpacingView />
                 <HomeGridView infos={this.state.discounts} onGridSelected={(this.onGridSelected)} />
@@ -136,7 +136,7 @@ class HomeScene extends PureComponent<Props, State> {
                    <Heading3>주변 친구</Heading3>
 				   <Heading3>주변 그룹</Heading3>
                 </View>
-            </View>
+            </ScrollView>
         )
     }
 
@@ -148,8 +148,8 @@ class HomeScene extends PureComponent<Props, State> {
 
 
 		return (
-            
-				<ScrollView style={styles.container}>
+            <View style={styles.container}>
+				<View>
 					<HomeMenuView menuInfos={api.menuInfo} onMenuSelected={this.onMenuSelected} />
 					<SpacingView />
 					<View style={styles.recommendHeader}>
@@ -157,8 +157,8 @@ class HomeScene extends PureComponent<Props, State> {
 					   <Heading3>주변 그룹</Heading3>
 					</View>
 					<NearbyCommonList/>
-				</ScrollView>
-            
+				</View>
+            </View>
         )
     }
 }
