@@ -22,6 +22,10 @@ export function Heading3({style, ...props}: Object) {
     return <Text style={[styles.h3, style]} {...props} />
 }
 
+export function Heading5({style, ...props}: Object) {
+    return <Text style={[styles.h5, style]} {...props} />
+}
+
 export function Paragraph({style, ...props}: Object) {
     return <Text style={[styles.p, style]} {...props} />
 }
@@ -41,8 +45,12 @@ const styles = StyleSheet.create({
         color: '#222222',
     },
     h3: {
-        fontSize: 14,
+        fontSize: 12,
         color: '#222222',
+    },
+    h5: {
+        fontSize: 8,
+        color: '#777777',
     },
     p: {
         fontSize: 13,

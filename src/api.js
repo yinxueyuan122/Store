@@ -24,6 +24,28 @@ export default {
         {title: '유모아', icon: require('./img/home/icon_homepage_life_service_category.png')},
         {title: '레시피', icon: require('./img/home/icon_homepage_entertainment_category.png')},
         
+    ],
+
+    nearbyItemInfo: [
+        {title: '노라자랑',subtitle:'4.19km 4명 보고 있음', imageUrl: require('./img/test/1.jpg'),id : 1},
+        {title: '들어와',subtitle:'6.19km 14명 보고 있음', imageUrl: require('./img/test/2.jpg'),id : 2},
+        {title: '다 같이',subtitle:'2.19km 22명 보고 있음', imageUrl: require('./img/test/3.jpg'),id : 3},
+        {title: '무조건',subtitle:'1.19km 3명 보고 있음', imageUrl: require('./img/test/1.jpg'),id : 4},
+        {title: '사랑',subtitle:'0.01km 1명 보고 있음', imageUrl: require('./img/test/2.jpg'),id : 5},
+        {title: '짱',subtitle:'2km 6명 보고 있음', imageUrl: require('./img/test/3.jpg'),id : 6},
+        {title: '좋은 하루',subtitle:'3.22km 156명 보고 있음', imageUrl: require('./img/test/1.jpg'),id : 7},
+        {title: '생각해줘',subtitle:'1.5km 46명 보고 있음', imageUrl: require('./img/test/2.jpg'),id : 8},
+        {title: '연길',subtitle:'4.54km 25명 보고 있음', imageUrl: require('./img/test/3.jpg'),id : 9},
+        {title: '노라자랑',subtitle:'4.19km 4명 보고 있음', imageUrl: require('./img/test/1.jpg'),id : 1},
+        {title: '들어와',subtitle:'6.19km 14명 보고 있음', imageUrl: require('./img/test/2.jpg'),id : 2},
+        {title: '다 같이',subtitle:'2.19km 22명 보고 있음', imageUrl: require('./img/test/3.jpg'),id : 3},
+        {title: '무조건',subtitle:'1.19km 3명 보고 있음', imageUrl: require('./img/test/1.jpg'),id : 4},
+        {title: '사랑',subtitle:'0.01km 1명 보고 있음', imageUrl: require('./img/test/2.jpg'),id : 5},
+        {title: '짱',subtitle:'2km 6명 보고 있음', imageUrl: require('./img/test/3.jpg'),id : 6},
+        {title: '좋은 하루',subtitle:'3.22km 156명 보고 있음', imageUrl: require('./img/test/1.jpg'),id : 7},
+        {title: '생각해줘',subtitle:'1.5km 46명 보고 있음', imageUrl: require('./img/test/2.jpg'),id : 8},
+        {title: '연길',subtitle:'4.54km 25명 보고 있음', imageUrl: require('./img/test/3.jpg'),id : 9},
+
     ]
 }
 
