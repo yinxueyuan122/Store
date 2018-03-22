@@ -9,7 +9,7 @@ export default class MineScene extends Component {
       <View style={{padding: 10}}>
        
         <Text style={{padding: 10, fontSize: 42}}>
-          MineScene2
+          MineScene23
         </Text>
       </View>
     );
