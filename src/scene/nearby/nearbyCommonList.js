@@ -1,8 +1,8 @@
 /**
- * Copyright (c) 2017-present, Liu Jinyong
+ * Copyright (c) 2018-present, heawoon yoon
  * All rights reserved.
  *
- * https://github.com/huanxsd/MeiTuan  
+ * https://github.com/yinxueyuan122/Store
  * @flow
  */
 
