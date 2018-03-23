@@ -8,10 +8,10 @@
 
 
 import React, {PureComponent} from 'react'
-import {View, Text, StyleSheet, StatusBar, Image, TouchableOpacity, ScrollView, RefreshControl} from 'react-native'
+import {View, StyleSheet, StatusBar, Image, TouchableOpacity, ScrollView, RefreshControl} from 'react-native'
 
-import {Heading2, Heading3, Paragraph} from '../../widget/Text'
-import {screen, system} from '../../common'
+import {Heading3, Paragraph} from '../../widget/Text'
+import {screen} from '../../common'
 import {color, DetailCell, NavigationItem, SpacingView} from '../../widget'
 
 type Props = {
