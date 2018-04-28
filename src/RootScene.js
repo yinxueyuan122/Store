@@ -2,7 +2,7 @@
  * Copyright (c) 2018-present, heawoon yoon
  * All rights reserved.
  *
- * https://github.com/yinxueyuan122/Store 
+ * https://github.com/yinxueyuan122/Store
  * @flow
  */
 
@@ -12,6 +12,7 @@ import {StatusBar} from 'react-native'
 import {StackNavigator, TabNavigator, TabBarBottom} from 'react-navigation'
 
 import color from './widget/color'
+import detail from './widget/DetailCell'
 import {screen, system} from './common'
 import TabBarItem from './widget/TabBarItem'
 
@@ -19,6 +20,9 @@ import HomeScene from './scene/home/homeScene'
 import ShareScene from './scene/share/shareScene'
 import NearbyScene from './scene/nearby/nearbyScene'
 import MineScene from './scene/mine/mineScene'
+import MineDetailScene from './scene/mine/mineDetailScene'
+import MineNameScene from './scene/mine/mineNameScene'
+import MineNoteScene from './scene/mine/mineNoteScene'
 
 
 const lightContentScenes = ['Home', 'Mine']
@@ -142,7 +146,10 @@ const Tab = TabNavigator(
 
 const Navigator = StackNavigator(
     {
-        Tab: {screen: Tab}
+        Tab: {screen: Tab},
+        MineDetail: {screen: MineDetailScene},
+        MineName: {screen: MineNameScene},
+        MineNote: {screen: MineNoteScene},
     },
     {
         navigationOptions: {

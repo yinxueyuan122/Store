@@ -13,9 +13,10 @@ import {View, StyleSheet, StatusBar, Image, TouchableOpacity, ScrollView, Refres
 import {Heading3, Paragraph} from '../../widget/Text'
 import {screen} from '../../common'
 import {color, DetailCell, NavigationItem, SpacingView} from '../../widget'
+import MineDetailScene from './mineDetailScene'
 
 type Props = {
-
+    navigation: any,
 }
 
 type State = {
@@ -54,10 +55,10 @@ class MineScene extends PureComponent<Props, State> {
 
     constructor(props: Object) {
         super(props)
-
         this.state = {
             isRefreshing: false
         }
+        this.renderHeader = this.renderHeader.bind(this)
     }
 
     onHeaderRefresh() {
@@ -89,15 +90,18 @@ class MineScene extends PureComponent<Props, State> {
     }
 
     renderHeader() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={styles.header}>
-                <Image style={styles.avatar} source={require('../../img/mine/avatar.png')} />
-                <View>
-                    <View style={{flexDirection: 'row', alignItems: 'center',}}>
-                        <Image style={{marginLeft: 4}} source={require('../../img/mine/beauty_technician_v15.png')} />
+                <TouchableOpacity onPress={() => navigate('MineDetail')}>
+                    <Image style={styles.avatar} source={require('../../img/mine/avatar.png')} />
+                    <View>
+                        <View style={{flexDirection: 'row', alignItems: 'center',}}>
+                            <Image style={{marginLeft: 4}} source={require('../../img/mine/beauty_technician_v15.png')} />
+                        </View>
+                        <Paragraph style={{color: 'white', marginTop: 4}}>개인정보 ></Paragraph>
                     </View>
-                    <Paragraph style={{color: 'white', marginTop: 4}}>개인정보 ></Paragraph>
-                </View>
+                </TouchableOpacity>
             </View>
         )
     }

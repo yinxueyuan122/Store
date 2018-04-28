@@ -72,38 +72,37 @@ class HomeScene extends PureComponent<Props, State> {
 
 
 	 componentDidMount() {
+
         this.requestData()
     }
 
     requestData = () => {
         this.setState({refreshing: true})
-        this.requestRecommend()
+        //this.requestUserInfo()
     }
     
-    requestRecommend = async () => {
-        try {
-            let response = await fetch(api.recommend)
-            let json = await response.json()
 
-            let dataList = json.data.map(
-                (info) => {
-                    return {
-                        id: info.id,
-                        imageUrl: info.squareimgurl,
-                        title: info.mname,
-                        subtitle: `[${info.range}]${info.title}`,
-                        price: info.price
-                    }
-                }
-            )
 
-            this.setState({
-                dataList: dataList,
-                refreshing: false,
+    requestUserInfo(){
+        var body = {"sId": 1};
+         fetch('http://10.34.255.241:8080/userInfo/user/selectUserInfoModel.do', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(body)
+        })
+             .then((response) => response.json())
+             .then((responseJson) => {
+                alert(JSON.stringify(responseJson))
             })
-        } catch (error) {
-            this.setState({refreshing: false})
-        }
+            .catch((error) => {
+                alert(error)
+                console.error(error);
+            });
+
+
     }
 	
 	renderCell = (info: Object) => {

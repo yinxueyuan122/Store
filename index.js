@@ -1,17 +1,6 @@
 import { AppRegistry,View } from 'react-native';
 import React, { Component } from 'react';
-import CustomView from './src/scene/nativeAndroid/pushLiveView';
+import RootScene from './src/RootScene';
 console.disableYellowBox = true;
 
-export default class groupProject extends Component {  
- render() {  
-    return (  
-    <View> 
-              
-             <CustomView />  
-    </View>  
-  );  
- }  
-}  
-
-AppRegistry.registerComponent('GroupProject', () => groupProject);
+AppRegistry.registerComponent('GroupProject', () => RootScene);
